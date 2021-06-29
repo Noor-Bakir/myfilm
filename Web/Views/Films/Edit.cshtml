@@ -1,0 +1,72 @@
+﻿@model FilmViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<div style="position:absolute;top:24%;left:24%;">
+<h1>Edit</h1>
+
+<h4>Film</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FilmName" class="control-label"></label>
+                <input asp-for="FilmName" class="form-control" />
+                <span asp-validation-for="FilmName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FilmLang" class="control-label"></label>
+                <input asp-for="FilmLang" class="form-control" />
+                <span asp-validation-for="FilmLang" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FilmTrans" class="control-label"></label>
+                <input asp-for="FilmTrans" class="form-control" />
+                <span asp-validation-for="FilmTrans" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FilmType" class="control-label"></label>
+                <input asp-for="FilmType" class="form-control" />
+                <span asp-validation-for="FilmType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Filmtime" class="control-label"></label>
+                <input asp-for="Filmtime" class="form-control" />
+                <span asp-validation-for="Filmtime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FilmDate" class="control-label"></label>
+                <input asp-for="FilmDate" class="form-control" />
+                <span asp-validation-for="FilmDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FilmDarg" class="control-label"></label>
+                <input asp-for="FilmDarg" class="form-control" />
+                <span asp-validation-for="FilmDarg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FilmImage" class="control-label"></label>
+                <input asp-for="File" type="file" class="form-control" />
+                <span asp-validation-for="FilmImage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Filmstory" class="control-label"></label>
+                <input asp-for="Filmstory" class="form-control" />
+                <span asp-validation-for="Filmstory" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+    </div>

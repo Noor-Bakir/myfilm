@@ -1,0 +1,90 @@
+﻿@model IEnumerable<FilmViewModel>
+
+@{
+    ViewData["Title"] = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Search</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FilmName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FilmLang)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FilmTrans)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FilmType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Filmtime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FilmDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FilmDarg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FilmImage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Filmstory)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Filmstory)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilmName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilmLang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilmTrans)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilmType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Filmtime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilmDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilmDarg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilmImage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Filmstory)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Filmstory)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

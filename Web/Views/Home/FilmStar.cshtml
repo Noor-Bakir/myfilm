@@ -1,0 +1,36 @@
+﻿@model Core.Entities.FilmStar1
+@{
+    ViewData["Title"] = "FilmStar";
+}
+<div style="position:absolute;top:24%;left:24%;">
+    <h2>Details</h2>
+
+    <div>
+        <h4>FilmStar1</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.StarName)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.StarName)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Film)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Film)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Starimage)
+            </dt>
+            <dd>
+                <img src="~/img/image/@Model.Starimage" class="img-thumbnail" />
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>
+</div>

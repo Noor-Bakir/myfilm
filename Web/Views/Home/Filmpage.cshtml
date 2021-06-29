@@ -1,0 +1,41 @@
+﻿@model Core.Entities.Film 
+
+
+@{
+    ViewData["Title"] = "Filmpage";
+}
+
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+    <a asp-action="Index">Back to List</a>
+</div>
+</div>
+<div class="container">
+    <div class="nav navbar-right address">
+        <img id="imagfilm" class="img-responsive" src="~/img/image/@Model.FilmImage" width="200" height="250">
+        <button class="download" style="color:aliceblue">لتحميل ومشاهدة الفيلم</button>
+    </div>
+    <table class=" tab-pane filminformaition">
+        <th colspan="2">@Html.DisplayFor(model => model.FilmName) </th>
+        <tr><td>@Html.DisplayFor(model => model.FilmLang)</td><td>اللغة</td></tr>
+        <tr><td> @Html.DisplayFor(model => model.FilmDarg)</td><td>التصنيف</td></tr>
+        <tr><td> @Html.DisplayFor(model => model.FilmType)</td><td>النوع</td></tr>
+        <tr><td> @Html.DisplayFor(model => model.FilmDate)</td><td>المدة</td></tr>
+        <tr><td> @Html.DisplayFor(model => model.Filmq)</td><td>الجودة</td></tr>
+        <tr><td>  @Html.DisplayFor(model => model.FilmTrans)</td><td>الترجمة</td></tr>
+        <tr><td> @Html.DisplayFor(model => model.FilmDate)</td><td>تاريخ الاضافة</td></tr>
+
+    </table>
+    <div class=" newsfilm">
+        <div class="backgroundstory"><strong style="color:aliceblue">القصة</strong></div>
+
+        <p> @Html.DisplayFor(model => model.Filmstory)</p>
+    </div>
+    <div class="filmstars">
+       
+            <div class="backgroundstory"><strong style="color:aliceblue">الأبطال</strong></div>
+            <a asp-action="FilmStar" ><input type="image" src="~/img/image/AlexRussell.jpg"></a>
+            
+    </div>
+</div>

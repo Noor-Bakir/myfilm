@@ -1,0 +1,43 @@
+﻿@model Web.ViewModels.HomeViewModel
+@{
+    ViewData["Title"] = "Login";
+}<script>
+   
+
+    </script>
+
+<form>
+    <table class="log">
+        <tr>
+            <td align="center" colspan="2">
+                <h1>Login Form</h1>
+            </td>
+        </tr>
+        <tr>
+            <td>Username:</td>
+            <td><input type="text" id="userName" value="" /></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" id="password" /></td>
+        </tr>
+        <tr>
+           
+          
+            <td colspan="2"><a href="Passrec.html">Forget Password</a></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="checkbox" name="cc" /><label for="cc">Remember me </label></td>
+        </tr>
+        <tr>
+            <td> <a href="https://localhost:44390/Films/Index" name="">Login</a></td>
+            <td> <input type="reset" value="Clear" /></td>
+        </tr>
+        <tr>
+            <td> <div id="error" style=""></div></td>
+        </tr>
+    </table>
+   
+
+</form>
+

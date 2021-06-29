@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UYF-8" />
+    <title>Palent Cinema</title>
+
+
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <!--سأستخدم ملف (Normalize)لضمان ظهور الموقع بشكل صحيح على جميع المتصفحات-->
+    <link rel="stylesheet" href="~/css/Normalize.css" />
+    <!--مكتبة لاختيار ايقونات للموقع-->
+    <link rel="stylesheet" href="~/css/all.min.css" />
+    <!--اختيار نوع الخط-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="~/image/x-icon" href="~/image/icon.ico">
+    <script src="~/js/jquery-3.6.0.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+  <style>
+      .home li {
+          background-color: #f0ffff;
+      }
+  </style>
+</head>
+<body  style="background-color:black">
+    
+    <connctionstring></connctionstring>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-default navbar-fixed-top " style="background-color:black">
+        <div class="container">
+            <div class="navbar-header">
+                <h3 class="navbar navbar-left addres">Plaent Cinema</h3>
+
+            </div>
+            <div class="navbar-collapse collapse">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="https://localhost:44390/Home/Login" style=" color: peachpuff; font-size: 19px;">
+                            تسجيل الدخول
+
+                        </a>
+                    </li>
+                    <li>
+                        <a style=" color: peachpuff; font-size: 19px;" href="login.html">اشترك مجاناَ</a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                            @using (Html.BeginForm("Search","Films",FormMethod.Post))
+                            {
+                               <input class="butsearch" type="text" name="searchName" id="searchName" placeholder="ابحث هنا عن الفيلم الذي تريد " />
+                            
+                             }
+                    </li>
+                </ul>
+
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <div class="list" style="z-index:1">
+        <ul type=none class="nav navbar-nav navbar-left films" style="margin-top:-22%;display:inline-grid;position:fixed">
+            <li>أفلام2021</li>
+            <li>أفلام 2020</li>
+            <li>أفلام 2019</li>
+            <li>أفلام عربية </li>
+            <li>أفلام كورية</li>
+            <li>أفلام أمريكية</li>
+            <li>أفلام هندية</li>
+            <li>أفلام تركية</li>
+
+
+
+        </ul>
+        <ul type=none class="nav navbar-nav navbar-left films" style="left:10%; margin-top: -22%;display:inline-grid;position:fixed">
+
+            <li>أفلام كوميدية/</li>
+            <li>أفلام رعب</li>
+            <li>أفلام أكشن</li>
+            <li>أفلام خيال علمي</li>
+            <li>أفلام وثائقية</li>
+            <li>أفلام تاريخية</li>
+            <li>أفلام رومانسية</li>
+            <li>أفلام حروب</li>
+
+
+        </ul>
+    </div>
+    <div class="home">
+        <ul type=none class="nav navbar-nav navbar-right">
+            <li class="homeitems"><a href="https://localhost:44390/Home/Index">  سينما في بيتك <i class="fas fa-couch"></i></a></li>
+            <li class="homeitems"><a href="https://"> الأكثر مشاهدة <i class="fas fa-chart-line"></i></a> </li>
+            <li class="homeitems"><a href="https://">أفلام <i class="fas fa-photo-video"></i></a></li>
+            <li class="homeitems"><a href="https://">مسلسلات <i class="fas fa-voicemail"></i></a></li>
+            <li class="homeitems"><a href="https://">النجوم <i class="far fa-user"></i></a></li>
+            <li class="homeitems"><a href="https://">السينما الخاصة بي <i class="fas fa-gifts"></i></a></li>
+        </ul>
+    </div>
+    <div>
+        @RenderBody();
+    </div>
+    <!--رابط لمطور الموقع-->
+    <table boder="1">
+        <tr>
+            <td class="me">
+                <p class="mef">مطّور الموقع</p>
+                <i class="fab fa-facebook-square"></i>
+            </td>
+        </tr>
+    </table>
+
+    <div id="end"
+         &copy;Noor Bakir
+    </div>
+
+
+    <div class="navbar navbar-fixed-bottom">
+        <div class="container">
+            <div class="subfooter " style="position:center;">
+                <p class="myfooter" style="font-size:20px;color:brown;bottom:10%;right:50%;">&copy;Noor Bakirجميع الحقوق محفوظة لدى موقعنا</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <main id="main" style="display: flex;
+    flex-wrap: wrap;"></main>
+    <script src="~/js/cinema.js" defer></script>
+
+    <script src="~/js/jq/jquery-1.11.1.min.js"></script>
+
+    <script src="~/js/bootstrap.js"></script>
+
+</body>
+</html>

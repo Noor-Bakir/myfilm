@@ -1,0 +1,39 @@
+﻿@model Web.ViewModels.HomeViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+@functions{
+
+}
+<script>
+
+    jQuery(document).ready(function () {
+        jQuery(".inf").hide();
+        /*jQuery(".jungle").click(function () {
+            jQuery(".inf").slideToggle();
+
+        });*/
+    });
+
+
+</script>
+<div class="mainfilms">
+    <div class="muchView" border="1">
+        <div> <div style="position:relative;left:78%;margin-top:-8%;width:11% ">كل الأفلام<a class="more" href="more.html"></a></div> </div>
+
+    </div>
+
+</div>
+<div class="all" style="position:relative;margin-top:14%;margin-left:37%;margin-right:25%">
+    @foreach (var item in Model.Film)
+    {
+    <div class="img-fluid rounded mb-5 allfilm" style="display:contents" >
+        <a asp-action="Filmpage" asp-route-id="@item.Id"><input type="image" src="~/img/image/@item.FilmImage" style="border-radius: 20px;border: 1px solid oldlace;"/></a> 
+    </div>
+
+
+            }
+    </div>
+   
+
+
